@@ -1,0 +1,89 @@
+<div class="section left">
+  <section>
+    <div class="details">
+      <app-front-title [title]="['Fix','My City']" [slug]="'A modern way to urbenize your city'"></app-front-title>
+      <p>
+        <strong>FixMyCity</strong> is a map based website and app that helps people in the Morocco inform their local authority of problems needing their attention, such as potholes, broken streetlamps, etc. It is the Moroccain instance of FixMyStreet. Reports are also published on the site.</p>
+        How to report a problem
+        <ul>
+          <li>Enter a nearby UK postcode, or street name and area</li>
+          <li>Locate the problem on a map of the area</li>
+          <li>Enter details of the problem</li>
+          <li>We send it to the council on your behalf</li>
+        </ul>
+        <br>
+      <app-front-button [class]="['small']" [link]="'/reports'" [title]="'Resent reports'"></app-front-button>
+    </div>
+    <div>
+      <app-image-holder [src]="'https://www.pngkey.com/png/full/291-2917528_designed-by-freepik-transparent-smart-city.png'"></app-image-holder>
+    </div>
+  </section>
+</div>
+<div class="section right">
+  <section>
+    <div class="details">
+      <app-front-title [title]="['Our ','Goal']" [slug]="'A centralized transparency   community dashboard'"></app-front-title>
+      <div>
+        <ul class="fasts">
+          <li>Your municipality will never be perfect at everything.</li>
+          <li>Local governments simply do not have the budget to be perfect at everything.</li>
+          <li>If a municipality can’t clearly explain where it’s at as a city, citizens will have a hard time trusting their local government.</li>
+        </ul>
+        <p>All of these facts beg a simple question—what can a local government do to create an air of transparency while still demonstrating that they are moving forward?
+          One of the best things to do is to create a community dashboard.</p>
+          A community dashboard shows citizens:
+        <ul>
+          <li>How a municipality is doing.</li>
+          <li>What the municipality is working toward.</li>
+          <li>How the municipality is taking steps in the right direction.</li>
+        </ul>
+      </div>
+      <!-- <div class="counter">
+        <div class="">
+          <span class="number">17</span>
+          <span class="tag">Orpholinat</span>
+        </div>
+        <div class="">
+          <span class="number">134</span>
+          <span class="tag">Orpholinat</span>
+        </div>
+        <div class="">
+          <span class="number">73</span>
+          <span class="tag">Orpholinat</span>
+        </div>
+        <div class="">
+          <span class="number">61</span>
+          <span class="tag">Orpholinat</span>
+        </div>
+      </div> -->
+    </div>
+    <div>
+      <app-image-holder [src]="'https://cdni.iconscout.com/illustration/premium/thumb/isometric-city-5154979-4326819.png'"></app-image-holder>
+    </div>
+  </section>
+</div>
+<div class="section ">
+  <section>
+    <div class="details">
+      <app-front-title [title]="['Our ','Focus']" [slug]="'7 important focus projects'"></app-front-title>
+      <div>
+        <ul>
+          <li>Community and neighborhood livability</li>
+          <li>Culture and reaction</li>
+          <li>Economic health</li>
+          <li>Environmental health</li>
+          <li>Hight preforming governement</li>
+          <li>Safe community</li>
+          <li>Transportation</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <app-image-holder [src]="'https://www.pngkey.com/png/full/129-1291404_3d-city-icons-2-5d.png'"></app-image-holder>
+    </div>
+  </section>
+</div>
+<div>
+    <app-front-title [title]="['Resent ','Reports']" [class]="['center']" [slug]="'More than '+projects.length+' report until now'"></app-front-title>
+    <app-front-gellery [cards]="projects" [pageSize]="6" [pagination]="true"></app-front-gellery>
+</div>

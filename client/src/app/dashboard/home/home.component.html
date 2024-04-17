@@ -1,0 +1,86 @@
+<div class="body">
+  <div class="bradcrump">
+  <app-jumbotron [title]="'Overview'">
+  </app-jumbotron>
+  <div class="stats">
+    <div class="stat">
+      <div class="icon">R</div>
+      <div class="number">
+        <span>{{ reports.length }}</span>
+        <span class="label">Reported case</span>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="icon">P</div>
+      <div class="number">
+        <span>{{ problems.length }}</span>
+        <span class="label">Problem solved</span>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="icon">S</div>
+      <div class="number">
+        <span>{{ specialisations.length }}</span>
+        <span class="label">Specialisation reported</span>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="icon">A</div>
+      <div class="number">
+        <span>{{ administrations.length }}</span>
+        <span class="label">Administration</span>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="icon">U</div>
+      <div class="number">
+        <span>{{ users.length }}</span>
+        <span class="label">App user</span>
+      </div>
+    </div>
+    <div class="stat">
+      <div class="icon">M</div>
+      <div class="number">
+        <span>{{ admins.length }}</span>
+        <span class="label">App manager</span>
+      </div>
+    </div>
+  </div>
+  <div class="datatable">
+    <app-datatable [cols]="['Problem','Localisation','Status','Note','created at','Actions']" [data]="reportsTable"  (onView)="callView($event)"></app-datatable>
+  </div>
+  <!-- View popup -->
+  <app-popup *ngIf="isViewing" (onClose)="callClose()" [title]="'View report'">
+    <form>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="">Problem</label>
+          <input class="form-field" type="text"  disabled [value]="activeReport.problem.name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="">Status</label>
+          <select class="form-field" name="" id="" disabled [value]="activeReport.status">
+            <option value="0" [selected]="!activeReport.status">In active</option>
+            <option value="1" [selected]="activeReport.status">Active</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="">Localisation</label>
+          <input class="form-field" type="text"  disabled [value]="activeReport.lat">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for=""></label>
+          <input class="form-field" type="text"  disabled [value]="activeReport.lan">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="">Problem</label>
+          <textarea class="form-field" type="text"  disabled [value]="activeReport.note" rows="7"></textarea>
+        </div>
+      </div>
+    </form>
+  </app-popup>
+</div>
