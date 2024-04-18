@@ -1,0 +1,6 @@
+<div class="jumbotron">
+  <div class="title">FixMyCity - <span *ngIf="title">{{ title }}</span></div>
+  <div *ngIf="isAdmin" class="actions">
+    <ng-content></ng-content>
+  </div>
+</div>
